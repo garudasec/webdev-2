@@ -1,12 +1,34 @@
 // import React, { Component } from 'react'
 
 //  class Sample extends Component {
-//     constructor(){
-//         super()
+//     constructor(props){
+//         super(props)
 //         this.state = {
 //             count: 0,
 //         }
 //     }
+
+//     componentDidMount(){
+//       console.log("Component is mounted")
+//     }
+
+//     shouldComponentUpdate(nextProps, nextState){
+//         // if(nextState.count === 1){
+//         //   return false
+//         // }
+//         // return true
+//         console.log("Component should update")
+//         return true
+//     }
+
+//     componentDidUpdate(){
+//       console.log("Component Did Update")
+//     }
+
+//     componentWillUnmount(){
+//       console.log("Component Will Unmount")
+//     }
+
 //     increment = () => {
 //         this.setState({count: this.state.count + 1})
 //     }
@@ -42,8 +64,8 @@ function Sample() {
     <div>
       <h1>This is a sample component</h1>
       <h2>{count}</h2>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>decrement</button>
+      <button style={{backgroundColor:"red",color:"white", width:"100px", height:"30px"}} onClick={increment}>Increment</button>
+      <button style={{backgroundColor:"yellow", color:"black", width:"100px", height:"30px"}} onClick={decrement}>decrement</button>
     </div>
   )
 }
